@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <style type="text/css">
+        .auto-style3 {
+            color: white;
+        }
+
+        .auto-style4 {
+            color: #9900CC;
+            background-color: lightpink;
+        }
+
+        #Text1 {
+            margin-left: 44px;
+        }
+
+        #Checkbox2 {
+            width: 21px;
+            margin-left: 10px;
+        }
+
+        #Checkbox1 {
+            margin-left: 8px;
+        }
+
+        #acceptor {
+            width: 20px;
+        }
+
+        #accepted {
+            margin-left: 177px;
+        }
+
+        #TM {
+            width: 523px;
+            height: 102px;
+        }
+
+        #harmony {
+            font: 900;
+            position: absolute;
+            font-style: normal;
+            right: 200px;
+            color: white;
+            nav-up: auto;
+            top: 910px;
+        }
+
+        h4 {
+            font: 900;
+            position: absolute;
+            font-style: normal;
+            right: 80px;
+            color: white;
+            nav-up: auto;
+            top: 950px;
+        }
+
+        #ss {
+            font: 900;
+            position: absolute;
+            font-style: normal;
+            right: 80px;
+            color: black;
+            nav-up: auto;
+            top: 1050px;
+        }
+
+        #u {
+            font: 900;
+            position: absolute;
+            font-style: normal;
+            right: 500px;
+            color: white;
+            nav-up: auto;
+            top: 1200px;
+        }
+        #c {
+            background:yellow;
+        }
+    </style>
+
+    <title>Turing Machine</title>
+    <link rel="stylesheet" href="styles/css/animate.css" />
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="styles/css/style.css" />
+    <link href="styles/css2/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="styles/TMstyle.css" rel="stylesheet">
+    <link href="styles/css2/agency.css" rel="stylesheet">
+    <script src="https:s//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/js/bootstrap.min.js"></script>
+    <script src="http://mdaines.github.io/viz.js/bower_components/viz.js/viz.js"></script>
+    <script src="scripts/noam.js"></script>
+    <script src="scripts/TMsimulator.js"></script>
+</head>
+
+<body>
+    <header>
+    <div class="container">
+        <div class="intro-text">
+            <div class="intro-lead-in">Welcome!</div>
+            <div class="intro-heading">It's Nice To Meet You</div>
+            <a href="#services" class="page-scroll btn btn-xl">Turing Machine</a>
+        </div>
+    </div>
+      </header>
+    <section id="services">
+ 
+        <h3>&#x2460;<span class="auto-style3"> Create automaton :- </span></h3>
+       <textarea id="TM" class="input-block-level" type="text" placeholder="or write your own" spellcheck="false"></textarea>
+        <p></p>
+        <p></p>
+  
+        <input type="button" id="createAutomaton" class="btn" value="Create automaton" style="background-color: #FEA601; color: #FFFFFF; font-size: large; font-style: normal; font-family: Georgia;"   />
+              
+        <h3 id="harmony">> &#x2461; <span class="auto-style3">Simulate automaton</span> </h3>
+        <h4><span class="auto-style3">Acceptor :
+            <input type="CheckBox" id="acceptor" />
+            &nbsp; Producer:
+            <input type="CheckBox" id="producer" runat="server" />
+        </span>
+            <input type="text" id="accepted" /></h4>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+       <div id="ss">
+            <div class="control-group">
+                <input id="inputString" type="text" class="input-block-level" placeholder="See if this fits"  spellcheck="false" style="color: black" />
+            </div>
+
+
+            <p>
+                <button id="startStop" class="btn" disabled color="#FFCC00" height="59px" width="224px" style="background-color: #FEB301; color: #FFFFFF;">
+                    Start</button>
+                <button id="inputNext" class="btn" disabled color="#FFCC00" height="59px" width="224px" style="background-color: #FEB301; color: #FFFFFF;">
+                    <i class="icon-forward"></i>
+                    Step
+             
+                </button>
+                <button id="fastRun" class="btn" disabled color="#FFCC00" height="59px" width="224px" style="background-color: #FEB301; color: #FFFFFF;">
+                    <i class="icon-forward"></i>
+                    Fast Run
+             
+                </button>
+                <button id="inputLast" class="btn" disabled style="background-color: #FEB301; color: #FFFFFF;">
+                 <i class="icon-forward"></i>  
+                    Finish</button>
+            </p>
+
+            <p id="inputError" class="text-error">
+            </p>
+        </div>
+    
+        <div class="container graph">
+            <h1>&#x2462;<span class="auto-style3"> Transition graph </span></h1>
+
+            <div id="automatonGraph"></div>
+        </div>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/js/bootstrap.min.js"></script>
+    <script src="http://mdaines.github.io/viz.js/bower_components/viz.js/viz.js"></script>
+    <script src="scripts/noam.js"></script>
+    <script src="scripts/TMsimulator.js"></script>
+</section>
+</body>
+</html>
